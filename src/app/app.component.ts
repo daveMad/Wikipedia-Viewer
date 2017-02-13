@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AppService} from './app.service';
+import { AppService } from './app.service';
 
 @Component({
   moduleId: module.id,
@@ -10,5 +10,16 @@ import {AppService} from './app.service';
 })
 export class AppComponent {
   title = 'app works!';
+  wikidata: any[];
+
+  constructor(private service: AppService) { }
+
+  getWikiData(param) {
+    this.service.searchData(param)
+      .subscribe(
+      data => this.wikidata = data,
+      error => console.log(error)
+      );
+  }
 
 }
