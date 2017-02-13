@@ -11,7 +11,8 @@ export class AppService {
     }
 
     searchData(params: string) {
-
+        return this.http.get(this.buildQuery(params))
+        .map((response : Response) => <any[]>response.json().data);
     }
 
     getSample() {
