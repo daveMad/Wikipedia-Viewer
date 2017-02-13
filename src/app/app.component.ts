@@ -10,14 +10,14 @@ import { AppService } from './app.service';
 })
 export class AppComponent {
   title = 'app works!';
-  wikidata: any[];
+  wikidata: any;
 
   constructor(private service: AppService) { }
 
   getWikiData(param) {
     this.service.searchData(param)
       .subscribe(
-      data => this.wikidata = data,
+      data => this.wikidata = data.query.search,
       error => console.log(error)
       );
   }

@@ -1,3 +1,10 @@
 <h1>
   {{title}}
 </h1>
+<button (click)='getWikiData("Albert")'>Get Sample Data</button>
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of wikidata"> {{item.title}} </li>
+</ul>
