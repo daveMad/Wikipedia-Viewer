@@ -1,15 +1,16 @@
 <div class="jumbotron vertical-center">
-  
-  <div class="input-group">
-    <input type="text" [(ngModel)]="searchkey" placeholder="title name" class="form-control">
-    <span class="input-group-btn">
+  <div class="container text-center">
+    <div class="input-group">
+      <input type="text" [(ngModel)]="searchkey" placeholder="title name" class="form-control">
+      <span class="input-group-btn">
         <button (click)='getWikiData(searchkey)' class="btn btn-default" type="button">Search!</button>
    </span>
+    </div>
+
+    <hr *ngIf="wikidata?.length > 0">
+
+    <ul style="list-style: none">
+      <li class="list-item"  *ngFor="let item of wikidata"> {{item.title}} </li>
+    </ul>
   </div>
-
-  <hr>
-
-  <ul>
-    <li *ngFor="let item of wikidata"> {{item.title}} </li>
-  </ul>
 </div>

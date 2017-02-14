@@ -10,8 +10,8 @@ import { AppService } from './app.service';
 })
 export class AppComponent {
   title = 'app works!';
-  wikidata: any;
-
+  wikidata: Array<any>;
+  searchkey = 'Albert';
   constructor(private service: AppService) { }
 
   getWikiData(param) {
