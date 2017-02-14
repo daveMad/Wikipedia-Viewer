@@ -22,4 +22,8 @@ export class AppComponent {
       );
   }
 
+  goToPage(title) {
+    window.location.href = '//en.wikipedia.org/wiki/' + title;
+  }
+
 }

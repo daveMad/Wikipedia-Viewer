@@ -10,7 +10,7 @@
     <hr *ngIf="wikidata?.length > 0">
 
     <ul style="list-style: none">
-      <li class="list-item"  *ngFor="let item of wikidata"> {{item.title}} </li>
+      <li class="list-item"  *ngFor="let item of wikidata" (click)='goToPage(item.title)'>  {{item.title}} </li>
     </ul>
   </div>
 </div>
