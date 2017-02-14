@@ -26,4 +26,8 @@ export class AppComponent {
     window.location.href = '//en.wikipedia.org/wiki/' + title;
   }
 
+  goToRandomPage(){
+    window.location.href = '//en.wikipedia.org/wiki/Special:Random';
+  }
+
 }
